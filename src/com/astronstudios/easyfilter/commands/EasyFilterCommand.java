@@ -1,6 +1,6 @@
 package com.astronstudios.easyfilter.commands;
 
-import com.astronstudios.easyfilter.filter.EasyFilter;
+import com.astronstudios.easyfilter.EasyFilter;
 import com.astronstudios.easyfilter.MsgUtil;
 import com.astronstudios.easyfilter.listeners.ChatListener;
 import org.bukkit.command.Command;

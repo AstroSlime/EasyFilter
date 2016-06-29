@@ -1,6 +1,5 @@
 package com.astronstudios.easyfilter;
 
-import com.astronstudios.easyfilter.filter.EasyFilter;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;

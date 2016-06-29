@@ -1,6 +1,6 @@
 name: EasyFilter
-main: com.astronstudios.easyfilter.filter.EasyFilter
-version: 1.0
+main: com.astronstudios.easyfilter.EasyFilter
+version: 1.0.1
 author: AstroSlime
 website: http://www.astronstudios.com/
 desciption: "A lightweight plugin to filter the chat box."

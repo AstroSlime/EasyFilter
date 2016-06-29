@@ -1,7 +1,8 @@
 package com.astronstudios.easyfilter.listeners;
 
 import com.astronstudios.easyfilter.*;
-import com.astronstudios.easyfilter.filter.EasyFilter;
+import com.astronstudios.easyfilter.events.PlayerChatFilterEvent;
+import com.astronstudios.easyfilter.EasyFilter;
 import com.astronstudios.easyfilter.filter.Filter;
 import com.astronstudios.easyfilter.filter.FilterResult;
 import org.bukkit.Bukkit;
@@ -99,6 +100,7 @@ public class ChatListener implements Listener {
                 for (String s : config.getStringList("settings.filter-messages.already-sent"))
                     MsgUtil.send(false, player, s);
             }
+            Bukkit.getPluginManager().callEvent(new PlayerChatFilterEvent(player, f, event.getMessage()));
         }
 
         // Convert any set emoji's if they are enabled

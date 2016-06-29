@@ -1,7 +1,5 @@
-package com.astronstudios.easyfilter.filter;
+package com.astronstudios.easyfilter;
 
-import com.astronstudios.easyfilter.MsgUtil;
-import com.astronstudios.easyfilter.VersionChecker;
 import com.astronstudios.easyfilter.commands.EasyFilterCommand;
 import com.astronstudios.easyfilter.listeners.ChatListener;
 import com.astronstudios.easyfilter.listeners.JoinListener;
@@ -18,7 +16,7 @@ import java.io.File;
 public class EasyFilter extends JavaPlugin implements Listener {
 
     private static String version;
-    private final int resource = 24882;
+    private final int resource = 25618;
     private static final String prefix = "\u00A7e[EasyFilter]\u00A7r ";
     private static String latestVersion = "1.0";
     private static EasyFilter instance;

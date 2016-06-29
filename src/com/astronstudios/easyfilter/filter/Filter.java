@@ -1,5 +1,6 @@
 package com.astronstudios.easyfilter.filter;
 
+import com.astronstudios.easyfilter.EasyFilter;
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;

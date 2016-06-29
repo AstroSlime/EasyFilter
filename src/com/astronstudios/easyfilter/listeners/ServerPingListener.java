@@ -1,6 +1,6 @@
 package com.astronstudios.easyfilter.listeners;
 
-import com.astronstudios.easyfilter.filter.EasyFilter;
+import com.astronstudios.easyfilter.EasyFilter;
 import com.astronstudios.easyfilter.MsgUtil;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.event.EventHandler;
