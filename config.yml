@@ -1,0 +1,170 @@
+#    ▄████████    ▄████████    ▄████████ ▄██   ▄      ▄████████  ▄█   ▄█           ███        ▄████████    ▄████████
+#   ███    ███   ███    ███   ███    ███ ███   ██▄   ███    ███ ███  ███       ▀█████████▄   ███    ███   ███    ███
+#   ███    █▀    ███    ███   ███    █▀  ███▄▄▄███   ███    █▀  ███▌ ███          ▀███▀▀██   ███    █▀    ███    ███
+#  ▄███▄▄▄       ███    ███   ███        ▀▀▀▀▀▀███  ▄███▄▄▄     ███▌ ███           ███   ▀  ▄███▄▄▄      ▄███▄▄▄▄██▀
+# ▀▀███▀▀▀     ▀███████████ ▀███████████ ▄██   ███ ▀▀███▀▀▀     ███▌ ███           ███     ▀▀███▀▀▀     ▀▀███▀▀▀▀▀
+#   ███    █▄    ███    ███          ███ ███   ███   ███        ███  ███           ███       ███    █▄  ▀███████████
+#   ███    ███   ███    ███    ▄█    ███ ███   ███   ███        ███  ███▌    ▄     ███       ███    ███   ███    ███
+#   ██████████   ███    █▀   ▄████████▀   ▀█████▀    ███        █▀   █████▄▄██    ▄████▀     ██████████   ███    ███
+#                                                                    ▀                                    ███    ███
+#
+#          Version: 1.0
+#          (Updates can be found on the spigot page or sent to any admins on join or plugin load.)
+#
+#   EasyFilter is a lightweight plugin built to make filtering out the chat box. Created in mind that
+#   you want the most configuration out of the plugin you can filter almost any part of the chat
+#   and even create chat channels to keep chat even cleaner.
+#
+#   All time units are in seconds, if something is in a List you cannot change it to be a String! Use
+#   a single line to give the same effect.
+#
+#   If you feel this plugin has helped allot in making your server easier to run or is easy to use and
+#   want more plugins like it to come out. Consider donating to help support development.
+#
+#   Spigot Page: To be added...
+#   Donate: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=MR96W6T2ZYBTC
+#
+#
+#          Commands
+#   /easyfilter reset                   -  Reset this config file back to default settings.
+#   /easyfilter reload                  -  Reload the this config file into the plugins cache.
+#   /easyfilter settings                -  Show current settings
+#   /easyfilter add w:s <word/site>     -  Add a word or site to the selected filter.
+#   /easyfilter remove w:s <word/site>  -  Remove a word or site from the selected filter.
+#   /easyfilter list w:s                -  List all blacklisted words or all whitelisted sites.
+#   /easyfilter global y:n              -  Set if the global chat filter is enabled or not.
+#   /easyfilter usernames y:n           -  Set if usernames ate enabled or not.
+#   /easyfilter enabled y:n             -  Set if the plugin is enabled or not.
+#
+#          Permissions
+#   easyfilter.bypass                   -  Bypass all filters.
+#   easyfilter.bypass.cooldown          -  Bypass cooldown filter.
+#   easyfilter.bypass.message           -  Bypass message filters (Ads, Offensive, Unicode).
+#   easyfilter.event-message.<group>    -  Sets if that group/player will have those group settings applied.
+#   easyfilter.fancyjoinmessage         -  Sets if the player is sent the fancy join message if enabled.
+#
+settings:
+   enabled: true
+   check-updates: true
+   advanced-filter: true
+   filter-usernames: true
+   filter-unicodes: true
+   filter-chat: true
+   filter-websites: true
+   emoji-converter: true
+   join-message: true
+   quit-message: true
+   disable-auto-send: true
+   filter-messages:
+      already-sent:
+         - "&cDo not repeat yourself."
+      username:
+         - "&6&m------------------------------------------"
+         - "&c&l  Your username contains inappropriate words in it. You cannot chat with that username."
+         - "&6&m------------------------------------------"
+      advertising:
+         - "&6&m------------------------------------------"
+         - "&c  Do &lnot&c advertise."
+         - "&6&m------------------------------------------"
+      offensive:
+         - "&6&m------------------------------------------"
+         - "&c  Do &lnot&c say inappropriate messages."
+         - "&6&m------------------------------------------"
+      cooldown:
+         - "&6&m------------------------------------------"
+         - "&c  Please wait &7%time%&c before chatting again."
+         - "&6&m------------------------------------------"
+      unsupported-unicode:
+         - "&6&m-------------------------------------------------"
+         - "&c  This server does not support the use of unicodes in chat!"
+         - "&6&m-------------------------------------------------"
+   chat-cooldowns:
+      default: 3
+      vip: 1
+
+#  Set a custom motd for when the players join and in the server list.
+motd:
+   enabled-join: true
+   enabled-list: true
+   enabled-players: true
+   max-players: -1
+   join-message:
+      - "&aDefault custom motd from &e&lEasyFilter&a. Change this in the config or disable it."
+   server-list: "&a&lCustom MOTD\n&aEdit this in the config for &eEasyFilter&a!"
+
+#  Set a custom help message. These messages will override the default help message.
+help-pages:
+   enabled: true
+   pages:
+      screen:
+         - "&6&m------------------------------------------"
+         - "    &lNeed Help?"
+         - ""
+         - " &e/help custom &7-&o Display a custom help page."
+         - ""
+         - "This is the default help page for EasyFilter."
+      custom:
+         - "&6&m------------------------------------------"
+         - "   &lCustom Help Page"
+         - ""
+         - "This is a custom help page."
+         - "You can change this in the config or add/remove more pages."
+
+#  All emoji's that are changed by the emoji converter.
+#  You can add in the html/hex code for it or add the unicode it's self. It is recommended
+#  that you use hex instead of the char as it can be lost. More info how to use this can be
+#  found on the spigot page.
+emojis:
+   :(: '9785'
+   :): '9786'
+   :O: '9685-9711-9685'
+
+#  Add a custom join message that can be delayed run on first join and any jojn after.
+fancy-join-messages:
+   enabled: true
+   override-motd: true
+   messages:
+      message-1:
+         delay: 0
+         message:
+            - "&eHello, Welcome to this server!"
+      message-2:
+         delay: 20
+         message:
+            - "&eThis server is running EasyFilter to keep chat clean and you happy."
+      message-3:
+         delay: 20
+         message:
+            - "&aHave a nice stay %username%!"
+
+#  All whitelisted websites that the filter will allow you to say. You do not need to add
+#  the sites full domain, just the name (eg. spigotmc, minecraft etc.).
+whitelisted-sites:
+   - "spigotmc"
+
+#  All blacklisted words the filter will find in chat and warn users for.
+blacklisted-words:
+   - "fuck"
+   - "shit"
+   - "ass"
+   - "fgt"
+   - "faggot"
+   - "go die"
+   - "rape"
+   - "cum"
+   - "penis"
+   - "vegina"
+   - "sex"
+   - "porn"
+
+#  Messages that are run on evens such as join and quit.
+event-messages:
+   op:
+      join: "&c[OP] %username%&6 has joined!"
+      quit: "&c[OP] %username%&6 has left!"
+   admin:
+      join: "&c[ADMIN] %username%&6 has joined!"
+      quit: "&c[ADMIN] %username%&6 has left!"
+   default:
+      join: ""
+      quit: ""

@@ -1,0 +1,14 @@
+name: EasyFilter
+main: com.astronstudios.easyfilter.filter.EasyFilter
+version: 1.0
+author: AstroSlime
+website: http://www.astronstudios.com/
+desciption: "A lightweight plugin to filter the chat box."
+
+commands:
+   easyfilter:
+      permission: easyfilter.admin
+      aliases: [ef]
+      permission-message: "\u00A7cYou do not have permission to preform this command!"
+      usage: "\u00A7cSyntax Error! Try doing '/channel help'"
+      desciption: "The base EasyFilter command to manage everything in game."
